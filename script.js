@@ -13,10 +13,6 @@ if(leadsFromLocalStorage){
     render(myLeads)
 }
 
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
-
 tabBtn.addEventListener("click",function(){
     chrome.tabs.query({active:true, currentWindow:true},function(tabs){
         myLeads.push(tabs[0].url)
